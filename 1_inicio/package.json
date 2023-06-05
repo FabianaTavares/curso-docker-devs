@@ -1,0 +1,15 @@
+{
+  "name": "docker-curso-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Fabiana <fabi.tavares1@gmail.com> (http://www.frtavares.com.br/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
