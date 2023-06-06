@@ -6,17 +6,61 @@ Curso Docker para Desenvolvedores (com Docker Swarm e Kubernetes) criado pelo Ma
 
 ## Comandos utilizados ao longo do projeto.
 
-### teste testes
+### Seção 1 - Introdução
 
-1. npm install para instalar as dependencias do projeto.
-2. instalar o json-server para simular o backend
-
-```
-npm install -g json-server
-```
-
-2. para rodar o json server:
+1. Instalação do Docker Desktop.
+2. Verificar versão instalada:
 
 ```
-json-server --watch despesas.json
+docker version
+```
+
+3. Para rodar containers utilize:
+
+```
+docker run
+```
+
+### Seção 2 - Trabalhando com Containers
+
+1. Executar uma imagem em um container:
+
+```
+docker run <imagem>
+```
+
+2. Verificar containers criado:
+
+```
+docker ps
+```
+
+3. Parar um container:
+
+```
+docker stop <id ou nome>
+```
+
+4. Remover um container:
+
+```
+docker -rm <id> -f (force)
+```
+
+5. Iniciar um container:
+
+```
+docker start <id ou nome>
+```
+
+6. Definir nome para um container:
+
+```
+docker run -d -p 80:80 --name <nome_desejado> nginx (apenas exemplo)
+```
+
+7. Acessar logs de um container:
+
+```
+docker logs <id>
 ```
