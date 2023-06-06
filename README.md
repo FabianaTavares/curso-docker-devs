@@ -6,7 +6,7 @@ Curso Docker para Desenvolvedores (com Docker Swarm e Kubernetes) criado pelo Ma
 
 ## Comandos utilizados ao longo do projeto.
 
-### teste
+### teste testes
 
 1. npm install para instalar as dependencias do projeto.
 2. instalar o json-server para simular o backend
