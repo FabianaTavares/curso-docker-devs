@@ -150,3 +150,63 @@ docker volume prune
 ```
 docker run -v volume:/data:ro
 ```
+
+### Seção 5 - Conectando containers com Networks
+
+1. Listando networks:
+
+```
+docker network ls
+```
+
+2. Criando networks:
+
+```
+docker network create <nome>
+```
+
+3. Removendo networks:
+
+```
+docker network rm <nome>
+```
+
+4. networks externos:
+
+```
+docker run -d -p 5000:5000 --name <nomecontainer> --rm <name>
+```
+
+5. networks maquina host:
+
+```
+docker run -d -p 5000:5000 --name <nomecontainer> --rm <namehost>
+```
+
+6. conexao entre containers:
+
+```
+docker network create <nome>
+```
+
+```
+docker run -d -p 3306:3306 --name <nomedocontainer> --rm --network <nomedared> -e <variaveldeambiente> = True <nomedaimagemderede>
+```
+
+7. conexao entre um container e uma rede:
+
+```
+docker network connect <rede> <container>
+```
+
+8. Desconectar um container da rede:
+
+```
+docker network disconnect <rede> <container>
+```
+
+9. Inspecionando networks:
+
+```
+docker network inspect <nomedarede>
+```
