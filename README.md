@@ -411,8 +411,31 @@ kubectl rollout status deployment/<NOME>
 minikube delete service <NOME>
 ```
 
-13. Deletando Deployments
+14. Deletando Deployments
 
 ```
 minikube delete deployment <NOME>
 ```
+
+15. Parando o deployment
+
+```
+minikube delete -f <ARQUIVO>
+```
+
+16. Iniciando o Serviço
+
+```
+minikube apply -f <ARQUIVO>
+```
+
+```
+minikube service <NOME>
+```
+
+17. Parando o Serviço
+
+```
+minikube delete -f <ARQUIVO>
+```
+
