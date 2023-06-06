@@ -324,3 +324,118 @@ docker network create --network <REDE>
 ```
 docker service update --network <REDE> <nome>
 ```
+
+### Seção 9 - Orquestração com Kubernetes
+
+1. Inicializando o Minikube
+
+```
+minikube start --driver=<DRIVER>
+```
+
+2. Parando o Minikube
+
+```
+minikube stop --driver=<DRIVER>
+```
+
+3. Acessando o Dashboard
+
+```
+minikube dashboard OU minikube dashboard --url
+```
+
+4. Criando Deployment
+
+```
+kubectl create deployment <NOME> --image=<IMAGE>
+```
+
+5. Verificando Deployment
+
+```
+kubectl get deployments ou kubectl describe deployments
+```
+
+6. Criando um service
+
+```
+kubectl expose deployment <NOME> --type=<TIPO> --port=<PORT>
+```
+
+7. Gerando um IP para o Service
+
+```
+minikube service <NOME>
+```
+
+8. Detalhes dos Services
+
+```
+kubectl get services
+```
+
+9. Replicando aplicação
+
+```
+kubectl scale deployment/<NOME> --replicas=<NUMERO>
+```
+
+10. Verificando número de réplicas
+
+```
+kubectl get rs
+```
+
+11. Diminuindo o número de réplicas
+
+```
+kubectl scale deployment/<NOME> --replicas=<NUMERO_MENOR>
+```
+
+12. Atualizando a imagem do projeto
+
+```
+kubectl set image deployment/<NOME> <NOME_CONTAINER>=<NOVA_IMAGEM>
+```
+
+12. Desfazer alterações de Projeto
+
+```
+kubectl rollout status deployment/<NOME>
+```
+
+13. Deletando Services
+
+```
+minikube delete service <NOME>
+```
+
+14. Deletando Deployments
+
+```
+minikube delete deployment <NOME>
+```
+
+15. Parando o deployment
+
+```
+minikube delete -f <ARQUIVO>
+```
+
+16. Iniciando o Serviço
+
+```
+minikube apply -f <ARQUIVO>
+```
+
+```
+minikube service <NOME>
+```
+
+17. Parando o Serviço
+
+```
+minikube delete -f <ARQUIVO>
+```
+
