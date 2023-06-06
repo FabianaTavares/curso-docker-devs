@@ -1,5 +1,5 @@
 {
-	"name": "docker-devs",
+	"name": "curso-docker-devs",
 	"version": "0.0.0",
 	"scripts": {
 		"release": "standard-version"
@@ -17,7 +17,7 @@
 		}
 	},
 	"repository": {
-		"url": "git@github.com:FabianaTavares/docker-devs.git"
+		"url": "git@github.com:FabianaTavares/curso-docker-devs.git"
 	},
 	"husky": {
 		"hooks": {
