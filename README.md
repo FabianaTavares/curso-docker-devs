@@ -238,3 +238,89 @@ docker-compose down
 ```
 docker-compose ps
 ```
+
+### Seção 8 - Docker Swarm para orquestração
+
+1. Inicializando o Swarm
+
+```
+docker swarm init
+```
+
+2. Listando todos os Nodes
+
+```
+docker node ls
+```
+
+3. Adicionando máquinas no Swarm
+
+```
+docker swarm join --token <TOKEN><IP>:<PORTA>
+```
+
+4. Subindo serviço no Swarm
+
+```
+docker service create --name <nome> <imagem>
+```
+
+5. Verificando serviços rodando no Swarm
+
+```
+docker service ls
+```
+
+6. Removendo serviços
+
+```
+docker service rm <nome>
+```
+
+7. Replicando serviços
+
+```
+docker service create --name <nome> --replicas <NUMERO> </NUMERO><imagem>
+```
+
+8. Deixar o Swarm em um Node
+
+```
+docker swarm leave
+```
+
+9. Removendo um Node
+
+```
+docker node rm <ID>
+```
+
+10. Inspecionando serviços
+
+```
+docker service inspect <ID>
+```
+
+11. Verificar quais containers estão rodando
+
+```
+docker service ps <ID>
+```
+
+12. Atualizando um imagem no Swarm
+
+```
+docker service update --image <imagem> <SERVICO>
+```
+
+13. Criando redes para serviços do Swarm
+
+```
+docker network create --network <REDE>
+```
+
+14. Conectando serviços a uma rede já existente
+
+```
+docker service update --network <REDE> <nome>
+```
