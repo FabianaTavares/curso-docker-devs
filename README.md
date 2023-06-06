@@ -210,3 +210,31 @@ docker network disconnect <rede> <container>
 ```
 docker network inspect <nomedarede>
 ```
+
+
+### Seção 7 - Gerenciando múltiplos containers com Docker Compose
+
+1. Rodando o Compose:
+
+```
+docker-compose up
+```
+
+2. Rodando o Compose em background:
+
+```
+docker-compose up -d
+```
+
+
+3. Parando o Compose:
+
+```
+docker-compose down
+```
+
+4. Verificando serviços do Compose:
+
+```
+docker-compose ps
+```
