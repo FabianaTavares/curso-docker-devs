@@ -106,3 +106,47 @@ docker rmi <imagem> -f (force)
 ```
 docker push <imagem>
 ```
+
+### Seção 4 - Introduzindo volumes aos nossos containers
+
+1. Criar volumes nomeados:
+
+```
+docker run -v nomedovolume:/data
+```
+
+2. Verificar volumes nomeados criados:
+
+```
+docker volume ls
+```
+
+3. Bind mount:
+
+```
+docker run /dir/data:/data
+```
+
+4. Inspecionar Volumes:
+
+```
+docker volume inspect <nome>
+```
+
+5. Removendo Volumes:
+
+```
+docker volume rm <nome>
+```
+
+6. Removendo Volumes em massa (prune), serve também para imagens e containers:
+
+```
+docker volume prune
+```
+
+7. Volume com permissão apenas de leitura:
+
+```
+docker run -v volume:/data:ro
+```
