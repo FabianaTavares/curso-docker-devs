@@ -64,3 +64,45 @@ docker run -d -p 80:80 --name <nome_desejado> nginx (apenas exemplo)
 ```
 docker logs <id>
 ```
+
+### Seção 3 - Criando imagens e avançando em Containers
+
+1. Fazer o build de uma imagem:
+
+```
+docker build <diretório da imagem>
+```
+
+2. Executar uma imagem:
+
+```
+docker run <imagem>
+```
+
+3. Verificar opções diponíveis de comandos:
+
+```
+docker run --help
+```
+
+4. Nomeando imagens:
+
+```
+docker tag <name>
+```
+
+```
+docker tag <name>:<tag>
+```
+
+5. Removendo imagens:
+
+```
+docker rmi <imagem> -f (force)
+```
+
+6. Enviando imagens para o Hub:
+
+```
+docker push <imagem>
+```
